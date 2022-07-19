@@ -1,0 +1,2 @@
+insert into user_item (id,username,password,TTLP_id) values (8,'dafni','dafni','TTLP_KALAMARIAS');
+insert into user_item (id,username,password,TTLP_id) values (9,'lefteris','lefteris','TTLP_KALAMARIAS');

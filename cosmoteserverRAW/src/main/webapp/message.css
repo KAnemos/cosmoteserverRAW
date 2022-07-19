@@ -1,0 +1,37 @@
+.toast {
+
+  position: relative;
+  width: 500px;
+  right: 0px;
+  left: 0px;
+  text-align: center;
+ 
+}
+
+
+.toast .message {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 25px;
+  text-align: center;
+  padding: 10px 15px;
+  margin: 2px 5px;
+  height: 24px;
+  display: inline-block;
+  cursor: pointer;
+  width: 60px;
+  border-radius: 4px;
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.19), 0 6px 13px 0 rgba(0, 0, 0, 0.24);
+}
+
+.toast .message {
+  height: 25px;
+  line-height: 25px;
+  width: 460px;
+  background: #0067b1;
+  text-transform: none;
+}

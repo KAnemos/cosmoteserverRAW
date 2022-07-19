@@ -1,0 +1,149 @@
+create table sequence
+(
+	next_value integer
+);
+create table user_item
+(
+	id integer primary key,
+	username varchar(255) unique,
+	password varchar(255),
+	loginstate varchar(3),
+	homesessionactive varchar(3),
+    TTLP_id varchar(20)
+
+);
+create table TTLP_AK
+(
+        id integer primary key,
+        TTLP_id varchar(20),
+        AK_id varchar(10),
+        AK_label varchar(20),
+        AK_xlong varchar(10),
+        AK_ylat varchar(10),
+        mdfsessionactive varchar(3)
+
+);
+
+create table TTLP_AK_KV
+(
+        id integer primary key,
+        AK_id varchar(10),
+        KV_id integer,
+        coord varchar(60),
+        pointer integer
+);
+
+
+create table event_data
+(
+        id integer primary key,
+        AK_id varchar(10),
+        KV_id integer,
+        KV_state varchar(60),
+        datestamp varchar(60),
+        FOREIGN KEY (KV_id)
+        REFERENCES TTLP_AK_KV(id)
+);
+
+create table KLM_box
+(
+        id integer primary key,
+        ip varchar(20),
+        AK_id varchar(10),
+        box_label varchar(20),
+        CP_state varchar(10),
+        CMD_state varchar(10),
+        Fissa1_Open varchar(1),
+        Fissa1_Short varchar(1),
+        Fissa1_Signal varchar(1),
+        Fissa1_Newnet varchar(1),
+        Fissa2_Open varchar(1),
+        Fissa2_Short varchar(1),
+        Fissa2_Signal varchar(1),
+        Fissa2_Newnet varchar(1),
+        Fissa3_Open varchar(1),
+        Fissa3_Short varchar(1),
+        Fissa3_Signal varchar(1),
+        Fissa3_Newnet varchar(1)
+);
+create table BYZ_box
+(
+        id integer primary key,
+        ip varchar(20),
+        AK_id varchar(10),
+        box_label varchar(20),
+        CP_state varchar(10),
+        CMD_state varchar(10),
+        Fissa1_Open varchar(1),
+        Fissa1_Short varchar(1),
+        Fissa1_Signal varchar(1),
+        Fissa1_Newnet varchar(1),
+        Fissa2_Open varchar(1),
+        Fissa2_Short varchar(1),
+        Fissa2_Signal varchar(1),
+        Fissa2_Newnet varchar(1),
+        Fissa3_Open varchar(1),
+        Fissa3_Short varchar(1),
+        Fissa3_Signal varchar(1),
+        Fissa3_Newnet varchar(1)
+
+);
+create table RYS_box
+(
+        id integer primary key,
+        ip varchar(20),
+        AK_id varchar(10),
+        box_label varchar(20),
+        CP_state varchar(10),
+        CMD_state varchar(10),
+        Fissa1_Open varchar(1),
+        Fissa1_Short varchar(1),
+        Fissa1_Signal varchar(1),
+        Fissa1_Newnet varchar(1),
+        Fissa2_Open varchar(1),
+        Fissa2_Short varchar(1),
+        Fissa2_Signal varchar(1),
+        Fissa2_Newnet varchar(1),
+        Fissa3_Open varchar(1),
+        Fissa3_Short varchar(1),
+        Fissa3_Signal varchar(1),
+        Fissa3_Newnet varchar(1)
+
+);
+create table TOY_box
+(
+        id integer primary key,
+        ip varchar(20),
+        AK_id varchar(10),
+        box_label varchar(20),
+        CP_state varchar(10),
+        CMD_state varchar(10),
+        Fissa1_Open varchar(1),
+        Fissa1_Short varchar(1),
+        Fissa1_Signal varchar(1),
+        Fissa1_Newnet varchar(1),
+        Fissa2_Open varchar(1),
+        Fissa2_Short varchar(1),
+        Fissa2_Signal varchar(1),
+        Fissa2_Newnet varchar(1),
+        Fissa3_Open varchar(1),
+        Fissa3_Short varchar(1),
+        Fissa3_Signal varchar(1),
+        Fissa3_Newnet varchar(1)
+
+);
+/*DROP PROCEDURE IF EXISTS dowhile;
+DELIMITER $$
+CREATE PROCEDURE dowhile()
+BEGIN
+        DECLARE i INT DEFAULT 1;
+        DECLARE FIELD VARCHAR(4);
+        label1: WHILE i <= 1 DO
+        SET i=i+1;
+        SET FIELD=CONCAT('d'+'50');
+        ALTER TABLE phone_data ADD COLUMN CAST(FIELD) varchar(60);
+        END WHILE label1;
+END;
+$$
+DELIMITER ;
+call dowhile;*/

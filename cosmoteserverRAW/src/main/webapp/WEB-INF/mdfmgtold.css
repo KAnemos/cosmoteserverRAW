@@ -1,0 +1,627 @@
+@charset "utf-8";
+table, th, td {
+    width: 20%;
+
+}
+table { 
+	display: table;
+    border-collapse: separate;
+	border: 5px solid black;
+    margin: auto;
+    width: 70%;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    font-family: Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+
+table th[scope=col] {
+   
+    background: linear-gradient(45deg, #49a09d, #7d5897);
+}
+
+
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+	text-align:center;
+}
+
+th {
+	text-align: left;
+}
+
+thead {
+	th {
+		background-color: #55608f;
+	}
+}
+
+tbody {
+	tr {
+		&:hover {
+			background-color: rgba(255,255,255,0.3);
+		}
+	}
+	td {
+		position: relative;
+		&:hover {
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: -9999px;
+				bottom: -9999px;
+				background-color: rgba(255,255,255,0.2);
+				z-index: -1;
+			}
+		}
+	}
+}
+
+
+/*.flat-table {
+  display: block;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 115%;
+  overflow: auto;
+  width: auto;
+  border: 1px solid black;
+  
+  th {
+   background-color: rgb(112, 196, 105);
+    color: white;
+    font-weight: normal;
+    padding: 20px 30px;
+    text-align: center;
+  }
+  td {
+    background-color: rgb(238, 238, 238);
+    color: rgb(111, 111, 111);
+    padding: 20px 30px;
+  }
+}*/
+
+
+/*.pretty-table
+{
+  padding: 0;
+  margin: auto;
+  border-collapse: collapse;
+  border: 1px solid #333;
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  color: #000;
+  background: #bcd0e4 url("widget-table-bg.jpg") top left repeat-x;
+}
+
+.pretty-table caption
+{
+  caption-side: bottom;
+  font-size: 0.9em;
+  font-style: italic;
+  text-align: right;
+  padding: 0.5em 0;
+}
+
+.pretty-table th, .pretty-table td
+{
+  border: 1px dotted #666;
+  padding: 0.5em;
+  text-align: left;
+  color: #632a39;
+}
+
+.pretty-table th[scope=col]
+{
+  color: #000;
+  background-color: #8fadcc;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+
+}
+
+.pretty-table th+th[scope=col]
+{
+  color: #fff;
+  background-color: #7d98b3;
+  border-right: 1px dotted #666;
+}
+
+.pretty-table th[scope=row]
+{
+  background-color: #b8cfe5;
+  border-right: 2px solid #333;
+}
+
+.pretty-table tr.alt th, .pretty-table tr.alt td
+{
+  color: #2a4763;
+}
+
+.pretty-table tr:hover th[scope=row], .pretty-table tr:hover td
+{
+  background-color: #632a2a;
+  color: #fff;
+}*/
+
+
+#container1 {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    border: 15px solid orange;
+    background-color: rgba(51, 102, 0, 0.4);
+}
+#header {
+    font-family:impact;
+    font-size: 24px;
+    text-align: center;
+	position: absolute;
+	height: 12%;
+	top:0;
+	right:0;
+	left:0;
+	background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);
+        -moz-transition: all 0.3s;
+         -webkit-border-radius: 7px;
+        z-index:3;
+}
+#plaisio1 {
+	background-color:rgba(72,72,72,0.4);
+	/*padding-left:35px;
+	padding-right:35px;*/
+	padding-top:5%;
+	/*padding-bottom:50px;*/
+        top: 12%;
+        left: 0px;
+	bottom:0px;
+        width:50%;
+	position: absolute;
+       /* margin-top:30px;*/
+   box-shadow: 0 0 0 10px #2a6352 inset;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+#plaisio2 {
+	background-color:rgb(204,229, 255);
+	/*padding-left:35px;
+	padding-right:35px;*/
+	padding-top:10px;
+	/*padding-bottom:50px;*/
+        top: 12%;
+        right: 0px;
+	bottom:0px;
+	width: 50%;        
+	position: absolute;
+        /*margin-top:30px;*/
+  -moz-border-radius: 7px;
+  box-shadow: 0 0 0 10px #632a39 inset;
+  -webkit-border-radius: 7px;
+}
+#yourlogo {
+	background-color:rgb(204,229, 255);
+	/*padding-left:35px;
+	padding-right:35px;*/
+    font-family: 'Arvo', serif;
+    font-size: 28px;
+    font-weight: 700;
+    height:16%;
+	bottom:0px;
+	width: 100%;        
+	position: absolute;
+        /*margin-top:30px;*/
+  -moz-border-radius: 7px;
+  box-shadow: 0 0 0 10px #632a39 inset;
+  -webkit-border-radius: 7px;
+}
+#plaisio3 {
+	font-family: 'Arvo', serif;
+    font-size: 28px;
+    font-weight: 700;
+	background-color:rgba(72,72,72,0.4);
+	/*padding-left:35px;
+	padding-right:35px;*/
+	padding-top:20px;
+	padding-bottom:2px;
+    top: 0px;
+    left: 0px;
+	bottom:0px;
+    width:50%;
+	position: absolute;
+    margin-top:0px;
+   box-shadow: 0 0 0 10px #632a39 inset;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+#plaisio4 {
+	font-family: 'Arvo', serif;
+    font-size: 28px;
+    font-weight: 700;
+	background-color:rgb(204,229, 255);
+	/*padding-left:35px;
+	padding-right:35px;*/
+	padding-top:20px;
+	padding-bottom:2px;
+    top:  0px;
+    right: 0px;
+	bottom:0px;
+	width: 50%;        
+	position: absolute;
+    margin-top:0px;
+    box-shadow: 0 0 0 10px #2a6352 inset;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+#plaisio5 {
+	background-color:rgb(204,229, 255);
+	padding-left:35px;
+	padding-right:0px;
+	padding-top:2px;
+	padding-bottom:2px;
+        top:  70px;
+        right: 0px;
+	bottom:0px;       
+	position: relative;
+        margin-top:0px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+#msgboard {
+	background-color:rgb(0, 0, 0);
+	padding-bottom:5px;
+        top: 10px;
+        right: 0px;
+	bottom:0px;
+	height: 50%;        
+	position: absolute;
+        margin-top:5px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+#wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.feedback-input {
+	color:#3c3c3c;
+	font-family: Helvetica, Arial, sans-serif;
+        font-weight:500;
+	font-size: 18px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+	padding: 13px 13px 13px 54px;
+	margin-bottom: 10px;
+        margin-top:10px;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+}
+
+.feedback-input:focus{
+	background: #fff;
+	box-shadow: 0;
+	border: 3px solid #3498db;
+	color: #3498db;
+	outline: none;
+  padding: 13px 13px 13px 54px;
+}
+
+.focused{
+	color:#30aed6;
+	border:#30aed6 solid 3px;
+}
+#button-blue{
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	display: table;
+    margin:auto;
+	width: 69%;
+	border: #fbfbfb solid 4px;
+	cursor:pointer;
+	/*background-color: #3498db;*/
+    background: linear-gradient(90deg, #3e9d41, #a0cea7, #152f44);
+	color:white;
+	font-size:24px;
+	padding-top:22px;
+	padding-bottom:22px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  margin-top:4px;
+  font-weight:700;
+}
+
+#button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: #0493bd;
+}
+	
+.submit:hover {
+	color: #3498db;
+}
+
+.inputF,
+.submitF {
+    display: inline-block;
+    padding: 2px 2px;
+    font-size: 20px;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+.inputF {
+    border: 1px solid lightgray;
+}
+
+.submitF {
+    background-color: lightgreen;
+    /**
+     * If the input field has a border,
+     * you need it here too to achieve equal heights.
+     */
+    border: 1px solid transparent;
+}
+
+/**
+ * Firefox Fix
+ * Without that the submit button will be too high.
+ */
+.submitF::-moz-focus-inner { 
+    border: 0;
+}
+.btn {
+  display: inline-block;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+/* Button Outline 
+----------------------------*/
+.btn-outline {
+  transition: color 0.3s;
+}
+
+.btn-outline.color {
+  margin-left: 1rem;
+  box-shadow: inset 0 0 0 2px #000;
+}
+
+/* When animating the lines simply move in a certain direction, so we need to make sure that they are hidden when outside of the button. This way we will get our realistic animating border effect. */
+.btn-outline {
+  overflow: hidden;
+  position: relative;
+}
+/* Left & Right Lines Container */
+.btn-outline .lines {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+/* All Lines */
+.btn-outline:before,
+.btn-outline:after,
+.btn-outline .lines:before,
+.btn-outline .lines:after{
+  background-color: #fff;
+  content: "";
+  position: absolute;
+  transition: transform 0.3s;
+}
+/* Top & Bottom Lines */
+.btn-outline:before,
+.btn-outline:after {
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+/* Top Line */
+.btn-outline:after {
+  bottom: auto;
+  top: 0;
+}
+.btn-outline.draw:after {
+  transition-delay: 0.6s;
+}
+/* Bottom Line */
+.btn-outline:before {
+  bottom: 0;
+  top: auto;
+}
+.btn-outline.draw:before {
+  transition-delay: 0.2s;
+}
+/* Left & Right Lines */
+.btn-outline .lines:before,
+.btn-outline .lines:after {
+  top: 0;
+  height: 100%;
+  width: 2px;
+}
+/* Left Line */
+.btn-outline .lines:before {
+  left: 0;
+  right: auto;
+}
+/* Right Line */
+.btn-outline .lines:after {
+  left: auto;
+  right: 0;
+}
+.btn-outline.draw .lines:after {
+  transition-delay: 0.4s;
+}
+/***************
+ * Hover State *
+ ***************/
+/* Text */
+.btn-outline:hover {
+  color: #000;
+}
+/* Top */
+.btn-outline:hover:after {
+  transform: translateX(100%);
+}
+.btn-outline.draw:hover:after {
+  transition-delay: 0s;
+}
+/* Bottom */
+.btn-outline:hover:before {
+  transform: translateX(-100%);
+}
+.btn-outline.draw:hover:before {
+  transform: translateX(-100%);
+  transition-delay: 0.4s;
+}
+/* Left */
+.btn-outline:hover .lines:before {
+  transform: translateY(-100%);
+}
+.btn-outline.center:hover .lines:before {
+  transform: translateY(100%);
+}
+.btn-outline.draw:hover .lines:before {
+  transform: translateY(-100%);
+  transition-delay: 0.6s;
+}
+/* Right */
+.btn-outline:hover .lines:after {
+  transform: translateY(100%);
+}
+.btn-outline.center:hover .lines:after {
+  transform: translateY(-100%);
+}
+.btn-outline.draw:hover .lines:after {
+  transform: translateY(100%);
+  transition-delay: 0.2s;
+}
+.input-group{
+position:relative;width:100%;overflow:hidden;
+}
+.input-group input{
+	position:relative;
+	height:45px;
+	border-radius:30px;
+	width:80%;
+	box-shadow:none;
+	border:1px solid #eaeaea;
+	padding-left:80px;}
+.input-group label{
+	position:absolute;
+	left:0;height:48px;
+	background:darkgreen;
+	padding:0px 5px;
+	border-radius:30px;
+	line-height:48px;
+	font-size:18px;
+	color:#fff;
+	top:0;
+	width:70px;
+	font-weight:100;}
+	
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 90%;
+  margin: 10px;
+  text-align: center;
+  line-height: 30%;
+  font-size: 30px;
+}
+
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  transform: scale(2);
+  padding: 10px;
+  box-shadow: 0 0 0 1px #2a6352 inset;
+}
+/*code below is for flashing state of A/K*/
+  .status {
+    font-family: monospace;
+    display: inline-block;
+    right:0px;
+    height: 1em;
+    line-height: 1.2em;
+    text-indent: 0;
+    margin: 15px 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    /*font-size: 1rem;*/
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 0.25rem;
+    padding: 1px 3px 3px 3px;
+  }
+
+.red {
+  color: red;
+}
+.orange {
+  color: orange;
+}
+.green {
+  color: green;
+}
+.flash {
+
+  animation: flash 2s linear infinite;
+  -webkit-animation: flash 2s infinite linear;
+  -ms-animation: flash 2s infinite linear;
+  -moz-animation: flash 2s infinite linear;
+
+}
+@keyframes flash {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  100% { opacity: 1; }
+}
+@-webkit-keyframes flash {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  100% { opacity: 1; }
+}
+@-ms-keyframes flash {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes flash {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+
